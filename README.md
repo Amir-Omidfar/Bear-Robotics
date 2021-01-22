@@ -26,23 +26,19 @@ Please upload the code for this project to GitHub or anywhere, and post a link t
 
 ## Code implementation explained
 
-This assignment is coded in Java using IntelliJ IDE version 2020.3 in Mac OS Big Sur version 11.1. 
-The main 5 files are located under "src/com/amir". The code is commented out so hopefully is self-explanatory. But let me know if there is any question. You may reach at: omidfar73@gmail.com . 
-To begin testing out the controller simply execute and run the program (Main.java). It walks you through the the control flow given above (in the problem assignment) while asking for your input at each stage. 
-**Control flow:  Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw**
-For testing purposes at the beginngin of Main.Java, I have instantiated three objects to be used which you may edit/change. Throughout the testing procedure at some stages it's assumed the user would enter a valid option so the validity of some options are not checked. I shall now briefly explain each of the given files:
+This assignment is coded in Java using IntelliJ IDE version 2020.3 in Mac OS Big Sur version 11.1. The main five files are located under "src/com/amir." The code is commented out, so hopefully is self-explanatory. But let me know if there is any question. You may reach me at omidfar73@gmail.com. To begin testing out the controller, execute and run the program (Main.java). It walks you through the control flow given above (in the problem assignment) while asking for your input at each stage. Control flow: Insert Card => PIN number => Select Account => See Balance/Deposit/Withdraw For testing purposes at the beginning of Main.Java, I have instantiated three objects to be used, which you may edit/change. I assumed the user would enter a valid option throughout the testing procedure, so some options are not sanity checked. I shall now briefly explain each of the given files:
 
 ### 1.User.java
-User class allows you to include personal information to be added to the account. For simplicity only first name, last name and account number are there now. But things like DOB, address, SSN and ... can also be added. I assumed the account number is fixed, however there are setter and getter methods for both first and last name. Finally there are two constructors (default one and one with parameters). 
+User class allows you to include personal information to be added to the account. For simplicity, only first name, last name, and account number are there now. But things like DOB, address, SSN, and ... can also be added. I assumed the account number is fixed; however, there are setter and getter methods for both first and last names. Finally, there are two constructors (default one and one with parameters). 
 
 ### 2.CashBin.Java
-This one creates objects for the ATM machines. It has attributes of the machine ID, its available balance, and whether a card is inserted or not. The methods are pretty strightforward except the ones about its Balance. My intention was to count for cases where the machine does not have as much money as the user requested but since it's very hypothetical it's not included in test cases in Main.Java. 
+This one creates objects for the ATMs. It has attributes of the machine ID, its available Balance, and whether a card is inserted or not. The methods are pretty straightforward except the ones about its Balance. I intended to count for cases where the machine does not have as much money as the user requested, but since it's very hypothetical, it's not included in test cases in Main.Java. 
 
 ### 3.Console.Java
-This one provides couple static methods for reading the user's input and simplifying the pin verification process (They are both used in Main.Java to build test cases and the control flow).
+This one provides a couple of static methods for reading the user's input and simplifying the pin verification process (They are both used in Main.Java to build test cases and the control flow).
 
 ### 4.Account.Java
-This file includes the main class in this implementation which is the user's account. It has checking and saving balances, an object from User.Java for user's info, the account pin number and two constructors (default one and one with parameters). The methods are pretty straightforward setters and getters mainly. There are three additional methods: 1.displayBalance 2.deposit 3.withdraw that are built upon the getters/setters for simpler and easier implementation.
+This file includes the main class in this implementation, which is the user's account. It has the checking and the saving balances, an object from User.Java for user's info, the account pin, and two constructors (default one and one with parameters). The methods are pretty straightforward setters and getters mainly. There are three additional methods: 1.displayBalance 2.deposit 3.withdraw that are built upon the getters/setters for more concise and easier implementation.
 
 ### 5.Main.Java
 Finally and example with following the given control flow is created in Main.Java which can be used for testing purposes.     
